@@ -1,7 +1,6 @@
-```css
 /* =========================================================
    SIMO KMB
-   Main Website Styles
+   Main Website Styles - Violet Theme Edition
 ========================================================= */
 
 
@@ -20,7 +19,7 @@ html {
 body {
     font-family: Arial, "Tahoma", sans-serif;
     background: #ffffff;
-    color: #111111;
+    color: #4a0072;
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -43,14 +42,14 @@ a {
 /* ================= VARIABLES ================= */
 
 :root {
-    --black: #111111;
-    --dark: #181818;
+    --black: #4a0072;      /* تم تحويله إلى لون فيلا داكن ملكي */
+    --dark: #2a0044;       /* تم تحويله إلى لون فيلا غامق جداً */
     --white: #ffffff;
-    --gray-1: #f7f7f7;
-    --gray-2: #eeeeee;
-    --gray-3: #d8d8d8;
-    --gray-4: #777777;
-    --gray-5: #444444;
+    --gray-1: #faf5ff;     /* خلفية رمادية بلمسة فيلا خفيفة */
+    --gray-2: #f0e5ff;
+    --gray-3: #d8b4fe;
+    --gray-4: #8a53a4;
+    --gray-5: #6b21a8;
 
     --container: 1400px;
 
@@ -72,7 +71,7 @@ a {
 
     background: rgba(255, 255, 255, 0.96);
 
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid #f0e5ff;
 
     position: sticky;
     top: 0;
@@ -89,10 +88,12 @@ a {
     font-size: 25px;
     font-weight: 900;
     letter-spacing: 1px;
+    color: #4a0072;
 }
 
 .logo span {
     font-weight: 400;
+    color: #8a53a4;
 }
 
 
@@ -110,7 +111,7 @@ a {
     font-size: 14px;
     font-weight: 600;
 
-    color: #333333;
+    color: #6b21a8;
 
     transition: var(--transition);
 }
@@ -126,14 +127,14 @@ a {
     width: 0;
     height: 1px;
 
-    background: #111111;
+    background: #4a0072;
 
     transition: var(--transition);
 }
 
 .navbar a:hover,
 .navbar a.active {
-    color: #111111;
+    color: #4a0072;
 }
 
 .navbar a:hover::after,
@@ -158,18 +159,19 @@ a {
     align-items: center;
     justify-content: center;
 
-    border: 1px solid #eeeeee;
+    border: 1px solid #f0e5ff;
     border-radius: 50%;
 
     transition: var(--transition);
 
     position: relative;
+    color: #4a0072;
 }
 
 .action-button:hover {
-    background: #111111;
+    background: #4a0072;
     color: #ffffff;
-    border-color: #111111;
+    border-color: #4a0072;
 }
 
 .action-button span {
@@ -189,7 +191,7 @@ a {
     align-items: center;
     justify-content: center;
 
-    background: #111111;
+    background: #4a0072;
     color: #ffffff;
 
     border-radius: 50%;
@@ -217,7 +219,7 @@ a {
             90deg,
             rgba(255,255,255,1) 0%,
             rgba(255,255,255,0.95) 48%,
-            rgba(255,255,255,0.35) 100%
+            rgba(240,229,255,0.35) 100%
         ),
         url("images/hero.jpg");
 
@@ -239,7 +241,7 @@ a {
     font-size: 300px;
     font-weight: 900;
 
-    color: rgba(0,0,0,0.025);
+    color: rgba(74, 0, 114, 0.04);
 
     line-height: 1;
 }
@@ -262,7 +264,7 @@ a {
 
     margin-bottom: 22px;
 
-    color: #666666;
+    color: #8a53a4;
 }
 
 .hero h1 {
@@ -275,16 +277,17 @@ a {
     letter-spacing: -3px;
 
     margin-bottom: 30px;
+    color: #4a0072;
 }
 
 .hero h1 span {
-    color: #777777;
+    color: #8a53a4;
 }
 
 .hero-description {
     max-width: 500px;
 
-    color: #666666;
+    color: #6b21a8;
 
     font-size: 17px;
 
@@ -321,12 +324,12 @@ a {
 .primary-button {
     gap: 25px;
 
-    background: #111111;
+    background: #4a0072;
     color: #ffffff;
 }
 
 .primary-button:hover {
-    background: #333333;
+    background: #6b21a8;
     transform: translateY(-3px);
 }
 
@@ -335,11 +338,12 @@ a {
 }
 
 .secondary-button {
-    border: 1px solid #111111;
+    border: 1px solid #4a0072;
+    color: #4a0072;
 }
 
 .secondary-button:hover {
-    background: #111111;
+    background: #4a0072;
     color: #ffffff;
 }
 
@@ -364,12 +368,12 @@ a {
     gap: 10px;
 
     font-size: 12px;
-    color: #666666;
+    color: #8a53a4;
 }
 
 .hero-feature strong {
     font-size: 11px;
-    color: #111111;
+    color: #4a0072;
 }
 
 
@@ -405,7 +409,7 @@ a {
     letter-spacing: 3px;
     text-transform: uppercase;
 
-    color: #888888;
+    color: #8a53a4;
 }
 
 .section-heading h2 {
@@ -413,12 +417,13 @@ a {
     line-height: 1.1;
 
     font-weight: 900;
+    color: #4a0072;
 }
 
 .section-heading > p {
     max-width: 300px;
 
-    color: #777777;
+    color: #6b21a8;
 
     font-size: 14px;
 }
@@ -455,7 +460,7 @@ a {
 
     color: #ffffff;
 
-    background-color: #333333;
+    background-color: #4a0072;
 
     background-size: cover;
     background-position: center;
@@ -463,20 +468,12 @@ a {
     transition: var(--transition);
 }
 
-
-/*
-   إذا أضفت صورًا لاحقًا:
-   images/men.jpg
-   images/women.jpg
-   images/kids.jpg
-*/
-
 .category-men {
     background:
         linear-gradient(
             0deg,
-            rgba(0,0,0,0.75),
-            rgba(0,0,0,0.05)
+            rgba(74,0,114,0.85),
+            rgba(74,0,114,0.1)
         ),
         url("images/men.jpg") center / cover;
 }
@@ -485,8 +482,8 @@ a {
     background:
         linear-gradient(
             0deg,
-            rgba(0,0,0,0.75),
-            rgba(0,0,0,0.05)
+            rgba(74,0,114,0.85),
+            rgba(74,0,114,0.1)
         ),
         url("images/women.jpg") center / cover;
 }
@@ -495,8 +492,8 @@ a {
     background:
         linear-gradient(
             0deg,
-            rgba(0,0,0,0.75),
-            rgba(0,0,0,0.05)
+            rgba(74,0,114,0.85),
+            rgba(74,0,114,0.1)
         ),
         url("images/kids.jpg") center / cover;
 }
@@ -513,7 +510,7 @@ a {
 
     inset: 0;
 
-    border: 1px solid rgba(255,255,255,0.25);
+    border: 1px solid rgba(255,255,255,0.3);
 
     pointer-events: none;
 }
@@ -526,7 +523,7 @@ a {
 
     font-size: 11px;
 
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .category-content {
@@ -541,7 +538,7 @@ a {
     letter-spacing: 3px;
     text-transform: uppercase;
 
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .category-content h3 {
@@ -555,14 +552,14 @@ a {
 .category-content p {
     font-size: 12px;
 
-    opacity: 0.85;
+    opacity: 0.9;
 }
 
 
 /* ================= PRODUCTS ================= */
 
 .products {
-    background: #f7f7f7;
+    background: #faf5ff;
 }
 
 .product-grid {
@@ -582,6 +579,7 @@ a {
     overflow: hidden;
 
     transition: var(--transition);
+    border: 1px solid #f0e5ff;
 }
 
 .product-card:hover {
@@ -600,7 +598,7 @@ a {
 
     overflow: hidden;
 
-    background: #eeeeee;
+    background: #f0e5ff;
 }
 
 .product-image img {
@@ -631,7 +629,7 @@ a {
 
     padding: 7px 12px;
 
-    background: #111111;
+    background: #4a0072;
     color: #ffffff;
 
     font-size: 10px;
@@ -654,7 +652,7 @@ a {
 
     background: linear-gradient(
         transparent 55%,
-        rgba(0,0,0,0.45)
+        rgba(74,0,114,0.6)
     );
 
     opacity: 0;
@@ -666,7 +664,7 @@ a {
     padding: 12px 25px;
 
     background: #ffffff;
-    color: #111111;
+    color: #4a0072;
 
     font-size: 12px;
     font-weight: 700;
@@ -688,7 +686,7 @@ a {
 /* PRODUCT INFO */
 
 .product-info {
-    padding: 22px 5px 8px;
+    padding: 22px 15px 15px;
 
     display: flex;
     align-items: center;
@@ -704,17 +702,20 @@ a {
 
     font-size: 10px;
 
-    color: #999999;
+    color: #8a53a4;
 }
 
 .product-info h3 {
     font-size: 17px;
+    color: #4a0072;
 }
 
 .price {
     white-space: nowrap;
 
     font-size: 17px;
+    color: #4a0072;
+    font-weight: 700;
 }
 
 .price small {
@@ -733,10 +734,11 @@ a {
 
     padding-bottom: 5px;
 
-    border-bottom: 1px solid #111111;
+    border-bottom: 1px solid #4a0072;
 
     font-size: 12px;
     font-weight: 700;
+    color: #4a0072;
 
     transition: var(--transition);
 }
@@ -765,7 +767,7 @@ a {
 
     overflow: hidden;
 
-    background: #111111;
+    background: #2a0044;
     color: #ffffff;
 
     text-align: center;
@@ -778,7 +780,7 @@ a {
 
     font-weight: 900;
 
-    color: rgba(255,255,255,0.025);
+    color: rgba(255,255,255,0.03);
 
     white-space: nowrap;
 
@@ -793,7 +795,7 @@ a {
 }
 
 .about .section-label {
-    color: #888888;
+    color: #d8b4fe;
 }
 
 .about h2 {
@@ -805,7 +807,7 @@ a {
 }
 
 .about h2 span {
-    color: #888888;
+    color: #d8b4fe;
 }
 
 .about p {
@@ -813,7 +815,7 @@ a {
 
     margin: 0 auto 35px;
 
-    color: #aaaaaa;
+    color: #f0e5ff;
 
     font-size: 16px;
 
@@ -828,7 +830,8 @@ a {
 
     padding: 15px 25px;
 
-    border: 1px solid #555555;
+    border: 1px solid #8a53a4;
+    color: #ffffff;
 
     font-size: 13px;
     font-weight: 700;
@@ -842,7 +845,7 @@ a {
 
 .outline-button:hover {
     background: #ffffff;
-    color: #111111;
+    color: #2a0044;
     border-color: #ffffff;
 }
 
@@ -867,14 +870,15 @@ a {
     line-height: 1.1;
 
     margin-bottom: 20px;
+    color: #4a0072;
 }
 
 .instagram-heading h2 span {
-    color: #777777;
+    color: #8a53a4;
 }
 
 .instagram-heading p {
-    color: #777777;
+    color: #6b21a8;
 
     margin-bottom: 25px;
 }
@@ -886,7 +890,8 @@ a {
 
     padding: 14px 20px;
 
-    border: 1px solid #dddddd;
+    border: 1px solid #d8b4fe;
+    color: #4a0072;
 
     font-size: 12px;
     font-weight: 700;
@@ -895,9 +900,9 @@ a {
 }
 
 .instagram-button:hover {
-    background: #111111;
+    background: #4a0072;
     color: #ffffff;
-    border-color: #111111;
+    border-color: #4a0072;
 }
 
 .instagram-button span {
@@ -925,7 +930,7 @@ a {
 
     overflow: hidden;
 
-    background: #eeeeee;
+    background: #f0e5ff;
 }
 
 .instagram-card img {
@@ -957,7 +962,7 @@ a {
     justify-content: center;
 
     background: #ffffff;
-    color: #111111;
+    color: #4a0072;
 
     opacity: 0;
 
@@ -974,7 +979,7 @@ a {
 .footer {
     padding: 80px 7% 25px;
 
-    background: #111111;
+    background: #2a0044;
     color: #ffffff;
 }
 
@@ -1002,14 +1007,16 @@ a {
     font-weight: 900;
 
     margin-bottom: 15px;
+    color: #ffffff;
 }
 
 .footer-logo span {
     font-weight: 400;
+    color: #d8b4fe;
 }
 
 .footer-brand p {
-    color: #888888;
+    color: #d8b4fe;
 
     font-size: 13px;
 
@@ -1019,15 +1026,16 @@ a {
 .footer-instagram {
     font-size: 12px;
 
-    border-bottom: 1px solid #555555;
+    border-bottom: 1px solid #8a53a4;
 
     padding-bottom: 5px;
 
     transition: var(--transition);
+    color: #ffffff;
 }
 
 .footer-instagram:hover {
-    color: #aaaaaa;
+    color: #d8b4fe;
 }
 
 
@@ -1046,10 +1054,11 @@ a {
     font-size: 13px;
 
     margin-bottom: 10px;
+    color: #ffffff;
 }
 
 .footer-column a {
-    color: #888888;
+    color: #d8b4fe;
 
     font-size: 12px;
 
@@ -1063,7 +1072,7 @@ a {
 .footer-contact p {
     max-width: 230px;
 
-    color: #888888;
+    color: #d8b4fe;
 
     font-size: 12px;
 
@@ -1080,12 +1089,12 @@ a {
 
     padding-top: 20px;
 
-    border-top: 1px solid #292929;
+    border-top: 1px solid #4a0072;
 
     display: flex;
     justify-content: space-between;
 
-    color: #666666;
+    color: #8a53a4;
 
     font-size: 11px;
 }
@@ -1205,7 +1214,7 @@ a {
             linear-gradient(
                 180deg,
                 rgba(255,255,255,0.96),
-                rgba(255,255,255,0.82)
+                rgba(240,229,255,0.85)
             ),
             url("images/hero.jpg") center / cover;
     }
@@ -1315,7 +1324,7 @@ a {
 
         background: linear-gradient(
             transparent 60%,
-            rgba(0,0,0,0.35)
+            rgba(74,0,114,0.5)
         );
     }
 
@@ -1411,4 +1420,3 @@ a {
         height: 330px;
     }
 }
-```
