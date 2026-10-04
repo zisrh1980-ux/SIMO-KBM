@@ -1,514 +1,206 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا</title>
+    <style>
+        /* ==========================================
+           1. ألوان الثيم والمتغيرات الأساسية
+           ========================================== */
+        :root {
+            --bg-main: #FFFFFF;              /* خلفية الموقع الرئيسية */
+            --text-title: #111111;           /* لون العناوين الرئيسية */
+            --text-subtitle: #666666;        /* لون النصوص الفرعية */
+            --input-bg: #F9F9F9;             /* خلفية حقول الإدخال */
+            --input-border: #E0E0E0;         /* إطار حقول الإدخال */
+            
+            /* ألوان الزر التفاعلي */
+            --btn-bg: #111111;               /* اللون الأساسي للزر (أسود فاخر) */
+            --btn-text: #FFFFFF;             /* لون خط الزر */
+            --btn-hover-bg: #C5A880;         /* لون التمرير (ذهبي/بيج فاخر) */
+            --btn-hover-text: #FFFFFF;       /* لون الخط عند التمرير */
+            
+            --transition-speed: 0.3s;
+        }
 
-    <title>SIMO KBM | أحذية عصرية</title>
+        /* ==========================================
+           2. التنسيقات العامة
+           ========================================== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-    <link rel="stylesheet" href="style.css">
-    <meta name="google-site-verification" content="NGG01N7ZveWxTBbazlU7h9bz-jZHKgnb9jWHOaJJoGQ" /></head>
-</head>   
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-title);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        /* ==========================================
+           3. حاوية نموذج التواصل
+           ========================================== */
+        .contact-container {
+            width: 100%;
+            max-width: 600px;
+            background: #FFFFFF;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid #F0F0F0;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-header .sub-title {
+            font-size: 0.85rem;
+            color: var(--text-subtitle);
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .contact-header .main-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text-title);
+        }
+
+        /* ==========================================
+           4. حقول الإدخال (Form Inputs)
+           ========================================== */
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-title);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 0.95rem;
+            background-color: var(--input-bg);
+            border: 1px solid var(--input-border);
+            border-radius: 4px;
+            color: var(--text-title);
+            outline: none;
+            transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--text-title);
+            box-shadow: 0 0 0 3px rgba(17, 17, 17, 0.1);
+            background-color: #FFFFFF;
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* ==========================================
+           5. زر التواصل المعدّل (Contact Us Button)
+           ========================================== */
+        .btn-submit {
+            width: 100%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 30px;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--btn-text);
+            background-color: var(--btn-bg);
+            border: 1px solid var(--btn-bg);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all var(--transition-speed) ease-in-out;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+        }
+
+        /* تأثير التمرير (Hover) لزر التواصل */
+        .btn-submit:hover {
+            background-color: var(--btn-hover-bg);
+            border-color: var(--btn-hover-bg);
+            color: var(--btn-hover-text);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(197, 168, 128, 0.3);
+        }
+
+        /* تأثير الضغط على الزر */
+        .btn-submit:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        /* تحريك أيكون/سهم الزر عند التمرير */
+        .btn-submit .arrow {
+            display: inline-block;
+            transition: transform var(--transition-speed) ease;
+        }
+
+        .btn-submit:hover .arrow {
+            transform: translateX(-5px);
+        }
+    </style>
+</head>
 <body>
 
-    <!-- ================= HEADER ================= -->
-
-    <header class="header">
-
-        <div class="logo">
-            <a href="index.html">
-                <span>SIMO</span> KBM
-            </a>
+    <div class="contact-container">
+        <!-- هيدر النموذج -->
+        <div class="contact-header">
+            <span class="sub-title">نحن هنا لمساعدتك</span>
+            <h2 class="main-title">تواصل معنا</h2>
         </div>
 
-        <nav class="navbar">
-            <a href="index.html" class="active">الرئيسية</a>
-            <a href="pages/shop.html">المتجر</a>
-            <a href="pages/men.html">رجال</a>
-            <a href="pages/women.html">نساء</a>
-            <a href="pages/kids.html">أطفال</a>
-            <a href="pages/contact.html">تواصل معنا</a>
-        </nav>
-
-        <div class="header-actions">
-
-            <a href="pages/search.html" class="action-button" aria-label="البحث">
-                <span>⌕</span>
-            </a>
-
-            <a href="pages/cart.html" class="action-button cart-button" aria-label="السلة">
-                <span>🛒</span>
-                <small>0</small>
-            </a>
-
-        </div>
-
-    </header>
-
-
-    <main>
-
-        <!-- ================= HERO ================= -->
-
-        <section class="hero">
-
-            <div class="hero-overlay"></div>
-
-            <div class="hero-content">
-
-                <h3 class="hero-small-title">
-                    SIMO KBM
-                </h3>
-
-                <h1>
-                    خطوتك تبدأ<br>
-                    <span>بأناقة.</span>
-                </h1>
-
-                <p class="hero-description">
-                    اكتشف تشكيلتنا المختارة من الأحذية العصرية
-                    التي تجمع بين الأناقة والراحة.
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a href="pages/shop.html" class="primary-button">
-                        اكتشف المجموعة
-                        <span>←</span>
-                    </a>
-
-                    <a href="https://www.instagram.com/simo_kbm_chaussures_75/"
-                       target="_blank"
-                       class="secondary-button">
-                        Instagram
-                    </a>
-
-                </div>
-
+        <!-- نموذج التواصل -->
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">الاسم الكامل</label>
+                <input type="text" id="name" class="form-control" placeholder="أدخل اسمك الكامل" required>
             </div>
 
-            <div class="hero-bottom">
-
-                <div class="hero-feature">
-                    <strong>01</strong>
-                    <span>تشكيلة عصرية</span>
-                </div>
-
-                <div class="hero-feature">
-                    <strong>02</strong>
-                    <span>أسعار مناسبة</span>
-                </div>
-
-                <div class="hero-feature">
-                    <strong>03</strong>
-                    <span>جودة مميزة</span>
-                </div>
-
+            <div class="form-group">
+                <label for="email">البريد الإلكتروني</label>
+                <input type="email" id="email" class="form-control" placeholder="example@domain.com" required>
             </div>
 
-        </section>
-
-
-        <!-- ================= CATEGORIES ================= -->
-
-        <section class="categories">
-
-            <div class="section-heading">
-
-                <div>
-                    <span class="section-label">اكتشف تشكيلتنا</span>
-                    <h2>تسوق حسب الفئة</h2>
-                </div>
-
-                <p>
-                    اختر الفئة المناسبة لك واكتشف
-                    أحدث الموديلات.
-                </p>
-
+            <div class="form-group">
+                <label for="subject">الموضوع</label>
+                <input type="text" id="subject" class="form-control" placeholder="كيف يمكننا مساعدتك؟" required>
             </div>
 
-
-            <div class="category-grid">
-
-                <a href="pages/men.html" class="category-card category-men">
-
-                    <div class="category-number">01</div>
-
-                    <div class="category-content">
-                        <span>Collection</span>
-                        <h3>رجال</h3>
-                        <p>اكتشف المجموعة ←</p>
-                    </div>
-
-                </a>
-
-
-                <a href="pages/women.html" class="category-card category-women">
-
-                    <div class="category-number">02</div>
-
-                    <div class="category-content">
-                        <span>Collection</span>
-                        <h3>نساء</h3>
-                        <p>اكتشف المجموعة ←</p>
-                    </div>
-
-                </a>
-
-
-                <a href="pages/kids.html" class="category-card category-kids">
-
-                    <div class="category-number">03</div>
-
-                    <div class="category-content">
-                        <span>Collection</span>
-                        <h3>أطفال</h3>
-                        <p>اكتشف المجموعة ←</p>
-                    </div>
-
-                </a>
-
+            <div class="form-group">
+                <label for="message">الرسالة</label>
+                <textarea id="message" class="form-control" placeholder="اكتب رسالتك هنا..." required></textarea>
             </div>
 
-        </section>
-
-
-        <!-- ================= PRODUCTS ================= -->
-
-        <section class="products">
-
-            <div class="section-heading">
-
-                <div>
-                    <span class="section-label">اختيارات SIMO KBM</span>
-                    <h2>منتجات مميزة</h2>
-                </div>
-
-                <a href="pages/shop.html" class="view-all">
-                    عرض جميع المنتجات
-                    <span>←</span>
-                </a>
-
-            </div>
-
-
-            <div class="product-grid">
-
-
-                <!-- PRODUCT 1 -->
-
-                <article class="product-card">
-
-                    <a href="pages/product.html" class="product-image">
-
-                        <span class="product-badge">
-                            جديد
-                        </span>
-
-                        <img src="images/m1.jpg"
-                             alt="حذاء رياضي من SIMO KBM">
-
-                        <div class="product-overlay">
-                            <span>عرض المنتج</span>
-                        </div>
-
-                    </a>
-
-                    <div class="product-info">
-
-                        <div>
-                            <span class="product-category">
-                                أحذية رياضية
-                            </span>
-
-                            <h3>
-                                حذاء رياضي
-                            </h3>
-                        </div>
-
-                        <strong class="price">
-                            299 <small>درهم</small>
-                        </strong>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PRODUCT 2 -->
-
-                <article class="product-card">
-
-                    <a href="pages/product.html" class="product-image">
-
-                        <span class="product-badge">
-                            مميز
-                        </span>
-
-                        <img src="images/shoe-2.jpg"
-                             alt="حذاء كاجوال من SIMO KBM">
-
-                        <div class="product-overlay">
-                            <span>عرض المنتج</span>
-                        </div>
-
-                    </a>
-
-                    <div class="product-info">
-
-                        <div>
-                            <span class="product-category">
-                                كاجوال
-                            </span>
-
-                            <h3>
-                                حذاء كاجوال
-                            </h3>
-                        </div>
-
-                        <strong class="price">
-                            349 <small>درهم</small>
-                        </strong>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PRODUCT 3 -->
-
-                <article class="product-card">
-
-                    <a href="pages/product.html" class="product-image">
-
-                        <img src="images/shoe-3.jpg"
-                             alt="حذاء عصري من SIMO KBM">
-
-                        <div class="product-overlay">
-                            <span>عرض المنتج</span>
-                        </div>
-
-                    </a>
-
-                    <div class="product-info">
-
-                        <div>
-                            <span class="product-category">
-                                أحذية عصرية
-                            </span>
-
-                            <h3>
-                                حذاء عصري
-                            </h3>
-                        </div>
-
-                        <strong class="price">
-                            0 <small>درهم</small>
-                        </strong>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= ABOUT ================= -->
-
-        <section class="about">
-
-            <div class="about-decoration">
-                SIMO KBM
-            </div>
-
-            <div class="about-content">
-
-                <span class="section-label">
-                    من نحن
-                </span>
-
-                <h2>
-                    أكثر من مجرد<br>
-                    <span>حذاء.</span>
-                </h2>
-
-                <p>
-                    في SIMO KBM نؤمن بأن الحذاء جزء أساسي
-                    من أسلوبك وشخصيتك. لذلك نحرص على تقديم
-                    تشكيلة عصرية تجمع بين التصميم الجميل
-                    والراحة والسعر المناسب.
-                </p>
-
-                <a href="pages/about.html" class="outline-button">
-                    تعرف علينا
-                    <span>←</span>
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= INSTAGRAM ================= -->
-
-        <section class="instagram">
-
-            <div class="instagram-heading">
-
-                <span class="section-label">
-                    تابعنا
-                </span>
-
-                <h2>
-                    يومياتنا على
-                    <span>Instagram</span>
-                </h2>
-
-                <p>
-                    شاهد أحدث المنتجات والموديلات والعروض
-                    على حسابنا.
-                </p>
-
-                <a href="https://www.instagram.com/simo_kbm_chaussures_75/"
-                   target="_blank"
-                   class="instagram-button">
-
-                    <span>◎</span>
-
-                    @simo_kbm_chaussures_75
-
-                    <span>↗</span>
-
-                </a>
-
-            </div>
-
-
-            <div class="instagram-grid">
-
-                <a href="https://www.instagram.com/simo_kbm_chaussures_75/"
-                   target="_blank"
-                   class="instagram-card">
-
-                    <img src="images/shoe-1.jpg"
-                         alt="SIMO KBM Instagram">
-
-                    <span>↗</span>
-
-                </a>
-
-                <a href="https://www.instagram.com/simo_kbm_chaussures_75/"
-                   target="_blank"
-                   class="instagram-card">
-
-                    <img src="images/shoe-2.jpg"
-                         alt="SIMO KBM Instagram">
-
-                    <span>↗</span>
-
-                </a>
-
-                <a href="https://www.instagram.com/simo_kbm_chaussures_75/"
-                   target="_blank"
-                   class="instagram-card">
-
-                    <img src="images/shoe-3.jpg"
-                         alt="SIMO KBM Instagram">
-
-                    <span>↗</span>
-
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer class="footer">
-
-        <div class="footer-top">
-
-            <div class="footer-brand">
-
-                <a href="index.html" class="footer-logo">
-                    <span>SIMO</span> KBM
-                </a>
-
-                <p>
-                    أسلوبك يبدأ من خطواتك.
-                </p>
-
-                <a href="https://www.instagram.com/simo_kbm_chaussures_75/"
-                   target="_blank"
-                   class="footer-instagram">
-                    Instagram ↗
-                </a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h3>المتجر</h3>
-
-                <a href="pages/shop.html">جميع المنتجات</a>
-                <a href="pages/men.html">رجال</a>
-                <a href="pages/women.html">نساء</a>
-                <a href="pages/kids.html">أطفال</a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h3>معلومات</h3>
-
-                <a href="pages/about.html">من نحن</a>
-                <a href="pages/contact.html">تواصل معنا</a>
-                <a href="pages/privacy.html">الخصوصية</a>
-
-            </div>
-
-
-            <div class="footer-column footer-contact">
-
-                <h3>SIMO KBM</h3>
-
-                <p>
-                    تابعنا على Instagram
-                    لمعرفة آخر الموديلات
-                    والعروض.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="footer-bottom">
-
-            <p>
-                © 2026 SIMO KBM
-            </p>
-
-            <p>
-                جميع الحقوق محفوظة
-            </p>
-
-        </div>
-
-    </footer>
-
-
-    <script src="js/script.js"></script>
+            <!-- زر الإرسال / التواصل المعدّل -->
+            <button type="submit" class="btn-submit">
+                <span>إرسال الرسالة</span>
+                <span class="arrow">&larr;</span>
+            </button>
+        </form>
+    </div>
 
 </body>
-
 </html>
